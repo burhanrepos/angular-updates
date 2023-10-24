@@ -1,0 +1,30 @@
+these are new features of angular 15:
+
+-> Stable Standalone APIs:
+    -> (command for standalone) ng g c standalone-component --standalone
+    -> this will not dependent on any component it will import in the component.ts file which things are required.
+
+-> Introducing a New API System
+  -> Directive Composition ;
+      <div appStyle appColor appFontWeight>
+        <!-- Content here Before -->
+      </div>
+
+      after: inside appStyle we use this in side @Directive
+      hostDirectives: [
+        { directive: ColorDirective, inputs: ['color: mycolor'] },
+        { directive: FontWtDirective, inputs: ['weight: myweight'] },
+        { directive: ClickEmitDirective, outputs: ['appEmit: clickEmit'] },
+      ],
+
+      and all this is possible inside standalone direcitve + project
+
+-> Debugging Made Easy With Improved Stack Traces
+
+-> Improved Experimental ESbuild Support
+
+-> Single File Components
+
+-> More Stable Image Directives
+
+-> Stabilized MDC-Based Components

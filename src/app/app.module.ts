@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFifteenUpdatesComponent } from './angular-15-all-updates/angular-fifteen-updates/angular-fifteen-updates.component';
+import { StandaloneComponentComponent } from './angular-15-all-updates/standalone-component/standalone-component.component';
+import { FontWeightDirective } from './font-weight.directive';
+import { ColorDirective } from './color.directive';
+import { StyleDirective } from './style.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AngularFifteenUpdatesComponent,
+    StandaloneComponentComponent,
+    FontWeightDirective,
+    ColorDirective,
+    StyleDirective
   ],
   imports: [
     BrowserModule,
