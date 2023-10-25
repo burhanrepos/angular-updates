@@ -1,0 +1,20 @@
+New Features Introduced in Angular 16
+  -> Required Component Inputs
+      ->  Among other big changes, a very useful feature is coming: “required inputs!” Added in Angular v16.0.0-next.3,
+          components can now mark their @Input as required. If no value is provided by the consumer of the component,
+          then you will get a compile-time error.
+  -> Self Closing Tags
+    <user-component [userEmail]="bob@email.com" />
+  -> Signals
+
+  -> Reactivity Revamped
+
+  -> Ngcc or Angular Compatibility Compiler Remove
+
+  -> Server Side Rendering and Hydration
+
+  -> Bind Route Param into Component Inputs Directly
+
+  -> DestroyRef Introduced in Lifecycle
+
+  -> ES Build Dev Server Support

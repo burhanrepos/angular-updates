@@ -20,6 +20,11 @@ these are new features of angular 15:
       and all this is possible inside standalone direcitve + project
 
 -> Debugging Made Easy With Improved Stack Traces
+  -> Improved the Error which stack tree in google console
+  -> meaningfull
+
+-> Image Directive
+  ->ngSrc which will optimized the loading time of url inside the src
 
 -> Improved Experimental ESbuild Support
 

@@ -1,1 +1,13 @@
-<app-angular-fifteen-updates></app-angular-fifteen-updates>
+
+
+<mat-tab-group>
+  <mat-tab  label="angular-15">
+    <ng-template mat-tab-label>Angular 15</ng-template>
+    <app-angular-fifteen-updates></app-angular-fifteen-updates>
+
+  </mat-tab>
+  <mat-tab label="angular-16">
+    <ng-template mat-tab-label>Angular 16</ng-template>
+    <app-angular-sixteen-updates [userInput]="userInput"/>
+  </mat-tab>
+</mat-tab-group>
