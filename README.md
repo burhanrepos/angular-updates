@@ -1,24 +1,44 @@
-# Angular Version Update History
+# Angular Updates
 
-This repository documents the version updates of the Angular framework, specifically focusing on versions 14 and later. It provides a clear history of each release and the changes introduced in each version.
+What changed in every major Angular release from v14 to v22, with a small live demo for each version.
 
-## Version History
+**Live site:** https://burhanrepos.github.io/angular-updates/
 
-Explore the version updates and their associated changes:
+| Version | Released | Headline | Demo |
+|---|---|---|---|
+| [22](https://burhanrepos.github.io/angular-updates/#/22) | 2026-06 | OnPush by default, Signal Forms stable, `debounced()`, `injectAsync()` | `debounced()` search box |
+| [21](https://burhanrepos.github.io/angular-updates/#/21) | 2025-11 | Signal Forms (experimental), zoneless by default, Vitest | Signal Forms email field |
+| [20](https://burhanrepos.github.io/angular-updates/#/20) | 2025-05 | Signal APIs stable, `httpResource`, zoneless preview | `**` and template literals in templates |
+| [19](https://burhanrepos.github.io/angular-updates/#/19) | 2024-11 | Standalone by default, `linkedSignal()`, `resource()` | `linkedSignal` + `resource` picker |
+| [18](https://burhanrepos.github.io/angular-updates/#/18) | 2024-05 | Experimental zoneless, `@let`, `ng-content` fallback | `@let` total and fallback content |
+| [17](https://burhanrepos.github.io/angular-updates/#/17) | 2023-11 | `@if` / `@for` / `@switch`, `@defer`, Vite builder | Control flow list and `@defer` block |
+| [16](https://burhanrepos.github.io/angular-updates/#/16) | 2023-05 | Signals, required inputs, `takeUntilDestroyed` | `signal` / `computed` / `effect` counter |
+| [15](https://burhanrepos.github.io/angular-updates/#/15) | 2022-11 | Standalone stable, directive composition | `hostDirectives` card |
+| [14](https://burhanrepos.github.io/angular-updates/#/14) | 2022-06 | Typed reactive forms, standalone preview | Typed `FormGroup` |
 
-- [Angular 15.0.0](versions/angular-15.0.0.md)
-- [Angular 16.0.0](versions/angular-16.0.0.md)
+Each version page links to the official release notes.
 
-Click on the version of interest to read the detailed release notes and change logs to understand the updates and improvements introduced in that version.
+## Run locally
 
-## Contributing
+Needs Node.js 22.22+ or 24.15+.
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+```bash
+npm install
+npm start        # http://localhost:4200
+npm test         # Vitest
+npm run build
+```
 
-1. Fork this repository.
-2. Create a new branch for your changes.
-3. Make your desired updates to the version files.
-4. Create a pull request with a clear description of your changes.
+## Project layout
 
-Please ensure that your contributions are well-documented and follow a consistent format to maintain the clarity and usability of this resource.
+- `src/app/versions.ts`: the version list and highlights. Add a new release here.
+- `src/app/demos.ts`: one small demo component per version.
+- `src/app/version-page.ts`: renders a version's highlights and its demo.
 
+## Adding a new version
+
+1. Add an entry at the top of `VERSIONS` in `src/app/versions.ts`.
+2. Add a demo component to `src/app/demos.ts` and register it in `DEMOS`.
+3. Add a row to the table above.
+
+Pushing to `master` deploys the site to GitHub Pages through `.github/workflows/deploy.yml`.
